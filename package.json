@@ -18,11 +18,13 @@
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.1.0",
     "debug": "3.1.0",
+    "ejs": "2.5.9",
     "eslint": "4.19.1",
     "express": "4.16.3",
     "jquery": "3.3.1",
     "morgan": "1.9.0",
-    "nodemon": "1.17.3"
+    "nodemon": "1.17.3",
+    "pug": "2.0.3"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "12.1.0",

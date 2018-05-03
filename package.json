@@ -5,16 +5,22 @@
   "main": "index.js",
   "scripts": {
     "start": "DEBUG=app node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "lint": "eslint app.js",
+    "lint:fix": "eslint app.js --fix",
+    "test": "echo \"Error: no test specified\" && exit 1" },
   "author": "Egwuenu Gift <laurandidi21@gmail.com> (https://giftegwuenu.com/)",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "4.1.1",
     "chalk": "2.4.1",
     "debug": "3.1.0",
+    "eslint": "4.19.1",
     "express": "4.16.3",
     "jquery": "3.3.1",
     "morgan": "1.9.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-import": "2.11.0"
   }
 }

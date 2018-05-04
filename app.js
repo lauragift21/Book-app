@@ -7,7 +7,9 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
+// enable logging in the command prompt
 app.use(morgan('tiny'));
+
 app.use(express.static(path.join(__dirname, '/public/')));
 app.use(
   '/css',
@@ -24,7 +26,13 @@ app.use(
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
-const bookRouter = require('./src/routes/bookRoute');
+const nav = [
+  { link: '/books', title: 'Book' },
+  { link: '/authors', title: 'Author' }
+];
+
+// import book routes from bookRouter.js
+const bookRouter = require('./src/routes/bookRoute')(nav);
 
 app.use('/books', bookRouter);
 app.get('/', (req, res) => {
